@@ -17,8 +17,8 @@ int status = 0;
  * Return: 0 on success
  */
 
-
 int main(int argc __attribute__((unused)), char **argv)
+
 {
 	char **current_command = NULL;
 	int i, type_command = 0;

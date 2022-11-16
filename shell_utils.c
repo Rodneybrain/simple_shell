@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * Auth: Adenoiki Ifeoluwa
- * Enebeli Chidi
+ * Auth: Enebeli Chidi
+ * Adenoiki Ifeoluwa
  *
  * Description:
  * the extended functions for main.c
@@ -71,11 +71,11 @@ void execute_command(char **tokenized_command, int command_type)
 	{
 		if (execve(check_path(tokenized_command[0]), tokenized_command, NULL) == -1)
 		{
-			perror(_getenv("PWD"));
-			exit(2);
+			perror(_getenv("PWD"));																			exit(2);
 		}
 	}
 	if (command_type == INTERNAL_COMMAND)
+
 	{
 		func = get_func(tokenized_command[0]);
 		func(tokenized_command);
@@ -116,8 +116,7 @@ char *check_path(char *command)
 		{
 			free(temp2);
 			free(path_array);
-			free(path_cpy);
-			return (temp);
+			free(path_cpy);																																			return (temp);
 		}
 		free(temp);
 		free(temp2);
@@ -131,8 +130,8 @@ char *check_path(char *command)
  * get_func - retrieves a function based on the command given and a mapping
  * @command: string to check against the mapping
  *
- * Return: pointer to the proper function, or null on fail
- */
+ *     * Return: pointer to the proper function, or null on fail
+ *      */
 void (*get_func(char *command))(char **)
 {
 	int i;
@@ -173,4 +172,5 @@ char *_getenv(char *name)
 	}
 	return (NULL);
 }
+
 

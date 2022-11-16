@@ -58,5 +58,5 @@ void quit(char **tokenized_command)
 		}
 	}
 	else
-		print("$: exit doesn't take more than one argument\n", STDERR_FILENO);
+
 }
